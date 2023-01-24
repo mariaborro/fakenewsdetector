@@ -16,9 +16,9 @@ st.write("Now you can check whether what you are about to read is fake news or n
 
 st.info("made with a LSTM model")
 
-image = Image.open('fakenewsimage.jpg')
+#image = Image.open('fakenewsimage.jpg')
 
-st.image(image)
+#st.image(image)
 
 st.subheader("Input the News title below")
 
