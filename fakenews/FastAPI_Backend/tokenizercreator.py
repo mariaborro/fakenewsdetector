@@ -1,6 +1,9 @@
 from tensorflow.keras.preprocessing.text import Tokenizer
 import pandas as pd
-from preprocessfakenews import preprocess_title
+#this is the import for locally executing the api:
+#from preprocessfakenews import preprocess_title
+#this is the import for deploying the api:
+from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
 from sklearn.model_selection import train_test_split
 
 def load_train_data():
