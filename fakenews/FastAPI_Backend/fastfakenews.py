@@ -39,4 +39,4 @@ async def make_prediction(text):
     prediction =  app.state.model.predict(title_preprocessed_token)
     numerot = 0 if prediction[0] < 0.5 else 1
     predicted_category = app.state.labels.get( numerot )
-    return {"prediction": predicted_category}
+    return {"prediction": "predicted_category"}
