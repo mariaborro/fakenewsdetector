@@ -17,7 +17,7 @@ app = FastAPI()
 #this is the loading we would do executing locally:
 #app.state.model = load_model('fakenews_model')
 #this is the loading we do for production:
-app.state.model = joblib.load('fakenews.FastAPI_Backend.model_for_deployment')
+app.state.model = joblib.load('fakenews/FastAPI_Backend/model_for_deployment')
 
 app.state.labels = {0: 'fake',1: 'true'}
 
