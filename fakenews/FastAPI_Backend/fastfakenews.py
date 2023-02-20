@@ -15,7 +15,7 @@ import numpy as np
 app = FastAPI()
 
 #this is the loading we would do executing locally:
-#app.state.model = load_model('fakenews_model')
+#app.state.model = joblib.load('model_for_deployment')
 #this is the loading we do for production:
 app.state.model = joblib.load('fakenews/FastAPI_Backend/model_for_deployment')
 
@@ -39,4 +39,4 @@ async def make_prediction(text):
     prediction =  app.state.model.predict(title_preprocessed_token)
     numerot = 0 if prediction[0] < 0.5 else 1
     predicted_category = app.state.labels.get( numerot )
-    return {"prediction": "predicted_category"}
+    return {"prediction": predicted_category}
