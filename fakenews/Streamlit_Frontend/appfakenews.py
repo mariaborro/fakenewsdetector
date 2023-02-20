@@ -27,8 +27,10 @@ sentence = st.text_area("Title:", "Example: Cats are undercover CIA agents",heig
 predict_btt = st.button("PREDICT")
 
 
-
-url = "http://127.0.0.1:8000/predict"
+#this is the url we would use if running locally:
+#url = "http://127.0.0.1:8000/predict"
+#this is the url we use for deploying:
+url = "https://api-fakenews.onrender.com/predict"
 
 if predict_btt:
     with st.spinner("Please wait :)"):
