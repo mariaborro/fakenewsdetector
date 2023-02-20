@@ -5,7 +5,11 @@ from tensorflow.keras.models import load_model
 #this is the import for deploying the api:
 from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tokenizercreator import load_tokenizer
+#this is the import for locally executing the api:
+#from tokenizercreator import load_tokenizer
+#this is the import for deploying the api:
+from fakenews.FastAPI_Backend.tokenizercreator import load_tokenizer
+
 import numpy as np
 
 app = FastAPI()
