@@ -1,13 +1,19 @@
 from fastapi import FastAPI
 from tensorflow.keras.models import load_model
-from preprocessfakenews import preprocess_title
+#this is the import for locally executing the api:
+#from preprocessfakenews import preprocess_title
+#this is the import for deploying the api:
+from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tokenizercreator import load_tokenizer
 import numpy as np
 
 app = FastAPI()
 
-app.state.model = load_model('fakenews_model')
+#this is the loading we would do executing locally:
+#app.state.model = load_model('fakenews_model')
+#this is the loading we do for production:
+app.state.model = load_model('fakenews.FastAPI_Backend.fakenews_model')
 
 app.state.labels = {0: 'fake',1: 'true'}
 
