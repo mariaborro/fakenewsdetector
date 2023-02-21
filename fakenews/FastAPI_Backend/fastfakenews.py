@@ -32,7 +32,7 @@ def home():
 async def make_prediction(text):
     """Returns the prediction of a pasted text
     """
-    return {"prova": "text"}
+    return {"prova": text}
     #new_title = text
     #title_preprocessed = preprocess_title(new_title)
     #tk = load_tokenizer()
