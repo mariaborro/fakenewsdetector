@@ -17,9 +17,9 @@ app = FastAPI()
 #this is the loading we would do executing locally:
 #app.state.model = joblib.load('model_for_deployment')
 #this is the loading we do for production:
-app.state.model = joblib.load('fakenews/FastAPI_Backend/model_for_deployment')
+#app.state.model = joblib.load('fakenews/FastAPI_Backend/model_for_deployment')
 
-app.state.labels = {0: 'fake',1: 'true'}
+#app.state.labels = {0: 'fake',1: 'true'}
 
 @app.get("/")
 def home():
@@ -32,7 +32,7 @@ def home():
 async def make_prediction(text):
     """Returns the prediction of a pasted text
     """
-    return {"prova":text}
+    return {"prova": "text"}
     #new_title = text
     #title_preprocessed = preprocess_title(new_title)
     #tk = load_tokenizer()
