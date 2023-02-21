@@ -35,9 +35,10 @@ url = "https://api-fakenews.onrender.com/predict"
 if predict_btt:
     with st.spinner("Please wait :)"):
         with requests.Session() as session:
-            response = session.get(url, params= {"text": sentence})
-            result = response.json()#["prediction"]
-            st.markdown(f"These news are: {result}!!")
+            #response = session.get(url, params= {"text": sentence})
+            #result = response.json()["prediction"]
+            #st.markdown(f"These news are: {result}!!")
+            st.markdown(f"checking if this does work!!")
             st.balloons()
             print(response.status_code)
             print(response.content)
