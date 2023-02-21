@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 #this is the import for locally executing the api:
 #from preprocessfakenews import preprocess_title
 #this is the import for deploying the api:
