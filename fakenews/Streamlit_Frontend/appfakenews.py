@@ -36,7 +36,7 @@ if predict_btt:
     with st.spinner("Please wait :)"):
         with requests.Session() as session:
             response = session.get(url, params= {"text": sentence})
-            result = response.json()["prediction"]
+            result = response.json()#["prediction"]
             st.markdown(f"These news are: {result}!!")
             st.balloons()
             print(response.status_code)
