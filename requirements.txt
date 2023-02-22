@@ -10,15 +10,15 @@ pandas
 scikit-learn
 
 # tests/linter
-black
+#black
 coverage
 flake8
-pytest
+#pytest
 yapf
 
 # API
 gcsfs
-google-cloud-storage
+#google-cloud-storage
 mlflow
 s3fs
 
@@ -34,7 +34,7 @@ requests
 fastapi
 
 # nuevas
-matplotlib
+#matplotlib
 tensorflow
 opencv-python-headless
 python-multipart
@@ -43,12 +43,12 @@ python-multipart
 pylint
 ipdb
 #jupyterlab
-seaborn
-packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
+#seaborn
+#packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
 streamlit
 altair
-plotly
-importlib-metadata<4.3;python_version<'3.8'
+#plotly
+importlib-metadata==4.11.4;python_version<'3.8'
 packaging<22
 google-auth-oauthlib<0.5
 protobuf<3.20
