@@ -12,7 +12,7 @@ scikit-learn
 # tests/linter
 #black
 coverage
-flake8
+#flake8
 #pytest
 yapf
 
