@@ -35,7 +35,7 @@ async def make_prediction(text):
     new_title = text
     try:
         title_preprocessed = preprocess_title(new_title)
-        return {"prova": title_preprocessed}
+        return {"prova": "s'hauria de poder preprocessar"}
     except:
         return {"prova": "no es pot preprocessar lol"}
     #tk = load_tokenizer()
