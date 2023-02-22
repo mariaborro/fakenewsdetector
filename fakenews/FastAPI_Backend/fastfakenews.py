@@ -12,9 +12,9 @@ from fakenews.FastAPI_Backend.tokenizercreator import load_tokenizer
 import joblib
 import numpy as np
 import string
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+#from nltk.tokenize import word_tokenize
+#from nltk.corpus import stopwords
+#from nltk.stem import WordNetLemmatizer
 
 app = FastAPI()
 
@@ -42,11 +42,11 @@ async def make_prediction(text):
     for punctuation in string.punctuation:
         new_title = new_title.replace(punctuation,"")
     new_title = word_tokenize(new_title)
-    stop_words = set(stopwords.words('english'))
-    new_title = [w for w in new_title if not w in stop_words]
-    new_title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in new_title]
-    new_title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in new_title]
-    new_title = " ".join(new_title)
+    #stop_words = set(stopwords.words('english'))
+    #new_title = [w for w in new_title if not w in stop_words]
+    #new_title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in new_title]
+    #new_title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in new_title]
+    #new_title = " ".join(new_title)
     return {"prova": new_title}
     #tk = load_tokenizer()
     #title_preprocessed_token = tk.texts_to_sequences([title_preprocessed])
