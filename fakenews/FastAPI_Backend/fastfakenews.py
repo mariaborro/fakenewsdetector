@@ -41,7 +41,7 @@ async def make_prediction(text):
     new_title = "".join(char for char in new_title if not char.isdigit())
     for punctuation in string.punctuation:
         new_title = new_title.replace(punctuation,"")
-    new_title = word_tokenize(new_title)
+    #new_title = word_tokenize(new_title)
     #stop_words = set(stopwords.words('english'))
     #new_title = [w for w in new_title if not w in stop_words]
     #new_title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in new_title]
