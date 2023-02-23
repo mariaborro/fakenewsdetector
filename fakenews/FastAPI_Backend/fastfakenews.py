@@ -15,7 +15,7 @@ import string
 
 import subprocess
 
-cmd = ["python3", "-m", "textblob.download_corpora"]
+cmd = ["python3", "-m", "nltk.downloader", "all"]
 
 subprocess.run(cmd)
 
