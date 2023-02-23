@@ -1,6 +1,7 @@
-import subprocess
+import nltk
 
-cmd = ["python3", "-m", "textblob.download_corpora"]
-
-subprocess.run(cmd)
-
+def dothething():
+    nltk.download('wordnet')
+    nltk.download('punkt')
+    nltk.download('all-corpora')
+    

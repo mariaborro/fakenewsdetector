@@ -12,7 +12,17 @@ from fakenews.FastAPI_Backend.tokenizercreator import load_tokenizer
 import joblib
 import numpy as np
 import string
-import fakenews.FastAPI_Backend.nltk_download_utils
+
+import subprocess
+
+cmd = ["python3", "-m", "textblob.download_corpora"]
+
+subprocess.run(cmd)
+
+from fakenews.FastAPI_Backend.nltk_download_utils import dothething
+
+dothething()
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
