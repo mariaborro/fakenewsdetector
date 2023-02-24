@@ -57,3 +57,5 @@ y-py==0.6.0
 #nltk==3.2.5
 joblib
 spacy
+typing-extensions<4.5.0
+
