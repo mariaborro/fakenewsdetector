@@ -23,7 +23,7 @@ def preprocess_title(title):
     title = title.split()
 
     #removing stopwords
-    sp = spacy.load(‘en_core_web_sm’)            
+    sp = spacy.load('en_core_web_sm')            
     stop_words = sp.Defaults.stop_words
 
     title = [w for w in title if not w in stop_words]
