@@ -1,7 +1,7 @@
 import string
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+#from nltk.tokenize import word_tokenize
+#from nltk.corpus import stopwords
+#from nltk.stem import WordNetLemmatizer
 
 def preprocess_title(title):
 
@@ -19,18 +19,18 @@ def preprocess_title(title):
         title = title.replace(punctuation,"")
 
     #tokenizing
-    title = word_tokenize(title)
+    title = title.split()
 
     #removing stopwords
-    stop_words = set(stopwords.words('english'))
+    #stop_words = set(stopwords.words('english'))
 
-    title = [w for w in title if not w in stop_words]
+    #title = [w for w in title if not w in stop_words]
 
     #lemmatizing verds and nouns
-    title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in title]
-    title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in title]
+    #title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in title]
+    #title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in title]
 
     #converting tokens to string again
-    title = " ".join(title)
+    #title = " ".join(title)
 
     return title
