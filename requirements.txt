@@ -35,7 +35,7 @@ fastapi
 
 # nuevas
 #matplotlib
-tensorflow
+tensorflow >= 2.4.0
 opencv-python-headless
 python-multipart
 
@@ -58,4 +58,3 @@ y-py==0.6.0
 joblib
 spacy
 typing-extensions<4.5.0
-
