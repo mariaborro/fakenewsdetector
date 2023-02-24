@@ -2,6 +2,7 @@ import string
 #from nltk.tokenize import word_tokenize
 #from nltk.corpus import stopwords
 #from nltk.stem import WordNetLemmatizer
+import spacy
 
 def preprocess_title(title):
 
@@ -22,9 +23,10 @@ def preprocess_title(title):
     title = title.split()
 
     #removing stopwords
-    #stop_words = set(stopwords.words('english'))
+    sp = spacy.load(‘en_core_web_sm’)            
+    stop_words = sp.Defaults.stop_words
 
-    #title = [w for w in title if not w in stop_words]
+    title = [w for w in title if not w in stop_words]
 
     #lemmatizing verds and nouns
     #title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in title]
