@@ -3,7 +3,9 @@ import string
 #from nltk.corpus import stopwords
 #from nltk.stem import WordNetLemmatizer
 #import spacy
-from textblob import TextBlob, Word
+#from textblob import TextBlob, Word
+import pattern
+from pattern.en import lemma, lexeme
 
 def preprocess_title(title):
 
@@ -32,13 +34,6 @@ def preprocess_title(title):
     title = " ".join(title)
 
     #lemmatizing:
-    sent = TextBlob(title)
-    tag_dict = {"J": 'a', 
-                "N": 'n', 
-                "V": 'v', 
-                "R": 'r'}
-    words_and_tags = [(w, tag_dict.get(pos[0], 'n')) for w, pos in sent.tags]
-    lemmatized_list = [wd.lemmatize(tag) for wd, tag in words_and_tags]
-    title = " ".join(lemmatized_list)
+    title = " ".join([lemma(wd) for wd in title.split()])
 
     return title
