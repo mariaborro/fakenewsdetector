@@ -3,6 +3,7 @@ import string
 #from nltk.corpus import stopwords
 #from nltk.stem import WordNetLemmatizer
 #import spacy
+from textblob import TextBlob, Word
 
 def preprocess_title(title):
 
@@ -27,11 +28,17 @@ def preprocess_title(title):
 
     title = [w for w in title if not w in stop_words]
 
-    #lemmatizing verds and nouns
-    #title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in title]
-    #title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in title]
-
     #converting tokens to string again
-    #title = " ".join(title)
+    title = " ".join(title)
+
+    #lemmatizing:
+    sent = TextBlob(title)
+    tag_dict = {"J": 'a', 
+                "N": 'n', 
+                "V": 'v', 
+                "R": 'r'}
+    words_and_tags = [(w, tag_dict.get(pos[0], 'n')) for w, pos in sent.tags]
+    lemmatized_list = [wd.lemmatize(tag) for wd, tag in words_and_tags]
+    title = " ".join(lemmatized_list)
 
     return title
