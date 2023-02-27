@@ -50,8 +50,8 @@ altair
 #plotly
 importlib-metadata==4.11.4
 #packaging<22LAST TAKEN OUT
-#google-auth-oauthlib<0.5LAST TAKEN OUT
-#protobuf<3.20LAST TAKEN OUT
+google-auth-oauthlib<0.5
+protobuf<3.20
 y-py==0.6.0
 #textblob
 nltk==3.2.5
@@ -63,3 +63,4 @@ joblib
 #treetaggerwrapper
 #nvidia-pyindex
 #nvidia-tensorrt
+protoc >= 3.19.0.
