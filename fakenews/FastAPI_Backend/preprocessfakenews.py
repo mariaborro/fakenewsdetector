@@ -1,6 +1,8 @@
 import string
 #from nltk.tokenize import word_tokenize
 #from nltk.corpus import stopwords
+import nltk
+nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 #import spacy
 #from textblob import TextBlob, Word
