@@ -6,7 +6,8 @@ import string
 #from textblob import TextBlob, Word
 #import pattern
 #from pattern.en import lemma, lexeme
-from gensim.utils import lemmatize
+#from gensim.utils import lemmatize
+import treetaggerwrapper as ttpw
 
 def preprocess_title(title):
 
@@ -35,6 +36,8 @@ def preprocess_title(title):
     title = " ".join(title)
 
     #lemmatizing:
-    title = [wd.decode('utf-8').split('/')[0] for wd in lemmatize(title)]
+    tagger = ttpw.TreeTagger(TAGLANG='en', TAGDIR='/Users/ecom-selva.p/Documents/MLPlus/11_Lemmatization/treetagger')
+    tags = tagger.tag_text(title)
+    title = [t.split('\t')[-1] for t in tags]
 
     return title
