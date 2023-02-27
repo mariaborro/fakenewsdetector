@@ -10,11 +10,11 @@ pandas
 scikit-learn
 
 # tests/linter
-black
-coverage
-flake8
-pytest
-yapf
+#black
+#coverage
+#flake8
+#pytest
+#yapf
 
 # API
 gcsfs
@@ -56,5 +56,5 @@ y-py==0.6.0
 #textblob
 #nltk==3.2.5
 joblib
-spacy
-typing-extensions<4.5.0
+#spacy
+#typing-extensions<4.5.0
