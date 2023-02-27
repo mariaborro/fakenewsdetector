@@ -49,7 +49,6 @@ streamlit
 altair
 #plotly
 importlib-metadata==4.11.4
-#;python_version=='3.7'
 packaging<22
 google-auth-oauthlib<0.5
 protobuf<3.20
@@ -62,5 +61,5 @@ joblib
 #pattern
 #gensim == 3.8.3
 treetaggerwrapper
-nvidia-pyindex
-nvidia-tensorrt
+#nvidia-pyindex
+#nvidia-tensorrt
