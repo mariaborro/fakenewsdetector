@@ -1,16 +1,16 @@
 from tensorflow.keras.preprocessing.text import Tokenizer
 import pandas as pd
 #this is the import for locally executing the api:
-from preprocessfakenews import preprocess_title
+#from preprocessfakenews import preprocess_title
 #this is the import for deploying the api:
-#from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
+from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
 from sklearn.model_selection import train_test_split
 
 def load_train_data():
     #this is the data loading for executing locally:
-    og_data = pd.read_csv("raw_data/dataset.csv")
+    #og_data = pd.read_csv("raw_data/dataset.csv")
     #this is the data loading for deploying:
-    #og_data = pd.read_csv("fakenews/FastAPI_Backend/raw_data/dataset.csv")
+    og_data = pd.read_csv("fakenews/FastAPI_Backend/raw_data/dataset.csv")
     data = og_data.dropna()
     data.reset_index(inplace=True)
     data = data[["title", "text", "label"]]

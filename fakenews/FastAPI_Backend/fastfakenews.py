@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 #from tensorflow.keras.models import load_model
 #this is the import for locally executing the api:
-from preprocessfakenews import preprocess_title
+#from preprocessfakenews import preprocess_title
 #this is the import for deploying the api:
-#from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
+from fakenews.FastAPI_Backend.preprocessfakenews import preprocess_title
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 #this is the import for locally executing the api:
-from tokenizercreator import load_tokenizer
+#from tokenizercreator import load_tokenizer
 #this is the import for deploying the api:
-#from fakenews.FastAPI_Backend.tokenizercreator import load_tokenizer
+from fakenews.FastAPI_Backend.tokenizercreator import load_tokenizer
 import joblib
 import numpy as np
 import string

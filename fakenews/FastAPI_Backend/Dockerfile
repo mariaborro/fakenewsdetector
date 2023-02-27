@@ -16,4 +16,5 @@ COPY . /app
 
 EXPOSE 8000
 
+#this is the version for deployment. if ran locally we would have "fastfakenews:app" instead of "fakenews.FastAPI_Backend.fastfakenews:app"
 CMD ["uvicorn", "fakenews.FastAPI_Backend.fastfakenews:app", "--host", "0.0.0.0", "--port", "8000" , "--reload"]
