@@ -35,8 +35,8 @@ def preprocess_title(title):
     
 
     #lemmatizing:
-    text = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in text]
-    text = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in text]
+    title = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in title]
+    title = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in title]
 
 
     #converting tokens to string again
