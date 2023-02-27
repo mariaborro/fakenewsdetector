@@ -63,4 +63,4 @@ joblib
 #treetaggerwrapper
 #nvidia-pyindex
 #nvidia-tensorrt
-protoc >= 3.19.0.
+#protoc >= 3.19.0.
