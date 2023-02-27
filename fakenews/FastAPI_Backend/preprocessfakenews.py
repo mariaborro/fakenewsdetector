@@ -1,13 +1,13 @@
 import string
 #from nltk.tokenize import word_tokenize
 #from nltk.corpus import stopwords
-#from nltk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 #import spacy
 #from textblob import TextBlob, Word
 #import pattern
 #from pattern.en import lemma, lexeme
 #from gensim.utils import lemmatize
-import treetaggerwrapper as ttpw
+#import treetaggerwrapper as ttpw
 
 def preprocess_title(title):
 
@@ -32,12 +32,14 @@ def preprocess_title(title):
 
     title = [w for w in title if not w in stop_words]
 
-    #converting tokens to string again
-    title = " ".join(title)
+    
 
     #lemmatizing:
-    tagger = ttpw.TreeTagger(TAGLANG='en', TAGDIR='/Users/ecom-selva.p/Documents/MLPlus/11_Lemmatization/treetagger')
-    tags = tagger.tag_text(title)
-    title = [t.split('\t')[-1] for t in tags]
+    text = [WordNetLemmatizer().lemmatize(w, pos = "v") for w in text]
+    text = [WordNetLemmatizer().lemmatize(w, pos = "n") for w in text]
+
+
+    #converting tokens to string again
+    title = " ".join(title)
 
     return title

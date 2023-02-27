@@ -54,12 +54,12 @@ google-auth-oauthlib<0.5
 protobuf<3.20
 y-py==0.6.0
 #textblob
-#nltk==3.2.5
+nltk==3.2.5
 joblib
 #spacy
 #typing-extensions<4.5.0
 #pattern
 #gensim == 3.8.3
-treetaggerwrapper
+#treetaggerwrapper
 #nvidia-pyindex
 #nvidia-tensorrt
