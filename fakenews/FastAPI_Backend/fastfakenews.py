@@ -42,7 +42,7 @@ async def make_prediction(text):
     """Returns the prediction of a pasted text
     """
     new_title = preprocess_title(text)
-    return {"prova": new_title}
+    return {"prova": str(new_title)}
     #tk = load_tokenizer()
     #title_preprocessed_token = tk.texts_to_sequences([title_preprocessed])
     #prediction =  app.state.model.predict(title_preprocessed_token)

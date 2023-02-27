@@ -4,8 +4,9 @@ import string
 #from nltk.stem import WordNetLemmatizer
 #import spacy
 #from textblob import TextBlob, Word
-import pattern
-from pattern.en import lemma, lexeme
+#import pattern
+#from pattern.en import lemma, lexeme
+from gensim.utils import lemmatize
 
 def preprocess_title(title):
 
@@ -34,6 +35,6 @@ def preprocess_title(title):
     title = " ".join(title)
 
     #lemmatizing:
-    title = " ".join([lemma(wd) for wd in title.split()])
+    title = [wd.decode('utf-8').split('/')[0] for wd in lemmatize(title)]
 
     return title
