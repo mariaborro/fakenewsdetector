@@ -59,4 +59,4 @@ joblib
 #spacy
 #typing-extensions<4.5.0
 #pattern
-gensim
+gensim == 3.8.3
