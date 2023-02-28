@@ -10,15 +10,15 @@ pandas
 scikit-learn
 
 # tests/linter
-#black
-#coverage
-#flake8
-#pytest
-#yapf
+black
+coverage
+flake8
+pytest
+yapf
 
 # API
 gcsfs
-#google-cloud-storage
+google-cloud-storage
 mlflow
 s3fs
 
@@ -28,39 +28,28 @@ joblib
 memoized-property
 termcolor
 
-# web stuff
+#web stuff
 uvicorn
 requests
 fastapi
 
 # nuevas
-#matplotlib
-tensorflow >= 2.4.0
+matplotlib
+tensorflow
 opencv-python-headless
 python-multipart
 
 # other
 pylint
 ipdb
-#jupyterlab
-#seaborn
-#packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
+jupyterlab
+seaborn
+packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
 streamlit
 altair
-#plotly
-importlib-metadata==4.11.4
-#packaging<22LAST TAKEN OUT
-google-auth-oauthlib<0.5
-protobuf<3.20
-y-py==0.6.0
-#textblob
-nltk==3.2.5
+plotly
+
+#eclusive to fakenews
+wordcloud
 joblib
-#spacy
-#typing-extensions<4.5.0
-#pattern
-#gensim == 3.8.3
-#treetaggerwrapper
-#nvidia-pyindex
-#nvidia-tensorrt
-#protoc >= 3.19.0.
+nltk
